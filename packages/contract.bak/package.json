@@ -1,0 +1,12 @@
+{
+  "name": "@mysbadges/bak.contract",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "ts-node ./test.ts",
+    "sol1": "solana --keypair ./configs/keypairs/u1.json",
+    "sol2": "solana --keypair ./configs/keypairs/u2.json",
+    "build": "cargo build-sbf --manifest-path=./mint/Cargo.toml --sbf-out-dir=./dist/program",
+    "deploy": "yarn sol1 program deploy dist/program/mint.so"
+  }
+}
